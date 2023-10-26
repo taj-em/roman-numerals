@@ -17,14 +17,14 @@ function convertToNumeral(num) {
   const thousandsArray = ["", "M", "MM", "MMM"]
   const errorMSG = "Please Enter A Valid Number";
   const numArray = num.toString().split("")
-  const flipArray = numArray.slice().reverse();
+  const flippedArray = numArray.slice().reverse();
   let finalArray = [];
-  let ones = assignNumeral(onesArray, flipArray[0]);
-  let tens = assignNumeral(tensArray, flipArray[1]);
-  let hundreds = assignNumeral(hundredsArray, flipArray[2]);
-  let thousands = assignNumeral(thousandsArray, flipArray[3]);
-  console.log("Flip Array: " + flipArray);
-  if (flipArray[3] >= 4) {
+  let ones = assignNumeral(onesArray, flippedArray[0]);
+  let tens = assignNumeral(tensArray, flippedArray[1]);
+  let hundreds = assignNumeral(hundredsArray, flippedArray[2]);
+  let thousands = assignNumeral(thousandsArray, flippedArray[3]);
+  console.log("Flipped Array: " + flippedArray);
+  if (flippedArray[3] >= 4) {
     return errorMSG;
   }
   finalArray.unshift(ones);
